@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <include
+        layout="@layout/support_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnOrder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_margin"
+                android:weightSum="7">
+
+                <EditText
+                    android:id="@+id/fieldName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:hint="@string/Name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:text="@string/WHAT_YOU_WANT_TO_ORDER"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_mid_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioCoffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Coffee" />
+
+                        <RadioButton
+                            android:id="@+id/radioMilk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Milk" />
+
+                        <RadioButton
+                            android:id="@+id/radioSpaghetti"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Spaghetti" />
+
+                        <RadioButton
+                            android:id="@+id/radioBread"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Bread" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="$5.00"
+                            android:textColor="@color/colorGray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp"
+                            android:text="$10.00"
+                            android:textColor="@color/colorGray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="$25.00"
+                            android:textColor="@color/colorGray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="7dp"
+                            android:text="$3.00"
+                            android:textColor="@color/colorGray" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:text="QUANTITY"
+                    android:textColor="@color/colorGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btnDecrement"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/button_drawable"
+                        android:text="-"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/displayQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_margin"
+                        android:layout_marginRight="@dimen/layout_margin"
+                        android:text="0"
+                        android:textColor="@color/colorBlack" />
+
+                    <Button
+                        android:id="@+id/btnIncrement"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/button_drawable"
+                        android:text="+"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:text="PRICE"
+                    android:textColor="@color/colorGray" />
+
+                <TextView
+                    android:id="@+id/displayPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="$ 0.00"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_background"
+            android:text="@string/Order"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</LinearLayout>

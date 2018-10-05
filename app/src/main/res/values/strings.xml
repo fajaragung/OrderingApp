@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OrderingApp</string>
+    <string name="Name">Name</string>
+    <string name="Order">Order</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Price">Price</string>
+    <string name="Cart_Order">Cart Order</string>
+    <string name="About_App">About App</string>
+    <string name="Help">Help</string>
+    <string name="My_Orders">My Orders</string>
+    <string name="WHAT_YOU_WANT_TO_ORDER">WHAT YOU WANT TO ORDER</string>
+    <string name="Coffee">Coffee</string>
+    <string name="Milk">Milk</string>
+    <string name="Spaghetti">Spaghetti</string>
+    <string name="Bread">Bread</string>
+</resources>

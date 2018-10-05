@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.robotsoftware.orderingapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcher_ordering"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/launcher_ordering"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activity 1 (Main) -->
+        <activity
+            android:name=".activities.views.layouts.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity 2 (Cart Order) -->
+        <activity
+            android:name=".activities.views.layouts.OrderCartActivity"
+            android:parentActivityName=".activities.views.layouts.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Activity 3 (About App) -->
+        <activity
+            android:name=".activities.views.layouts.ActivityAboutApp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+    </application>
+</manifest>
